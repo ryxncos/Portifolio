@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: linear-gradient(to right, #0a1128, #001f54, #034078);
+    color: white;
+    height: 100vh;
+    font-size: 25px;
+}
+/* ----- HEADER ----- */
+.header{
+    padding: 30px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-areas: 
+    "logo menuArea socialMedias";
+}
+
+.logo{
+    grid-area: logo;
+
+
+}
+.logo img{
+    width: 250px;
+}
+.menu{
+    display: flex ;
+    justify-content: center;
+    gap: 25px;
+    grid-area: menuArea;
+    transition: transform 0.3s ease-in;
+}
+.menu div a{
+    text-decoration: none;
+    color: white;   
+} 
+.menu :hover{
+    transform: scale(1.1) translateY(-3px);
+}
+.socialMedias{
+    gap: 10px;
+    display: flex;  
+    justify-content: end;
+    grid-area: socialMedias;
+    transition: transform 0.3s ease;
+}
+.socialMedias :hover{
+    transform: scale(1.1) translateY(-3px);
+}
+.socialMedias div img{
+    width: 40px;
+
+}
+/* ----- CONTENT ----- */
+.sobreMimtittle{
+    text-align: center;
+}
+.sobreMimArea{
+    /* border: 3px solid saddlebrown; */
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "pfpCard sobreTxt";
+}
+.pfpCard{
+    grid-area: pfpCard;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 150px; */
+}
+.detalhesCard div{
+    text-align: center;
+}
+.sobreTxt{
+    text-align: center;
+    padding: 20px;
+    border-radius: 40px;
+    grid-area: sobreTxt;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+}
+.picP img{
+    background-repeat: cover;
+    border-radius: 50px;
+    width: 150px;
+    height: 200px;
+    /* border: 3px solid saddlebrown; */
+}
+/* ----- FOOTER ----- */
