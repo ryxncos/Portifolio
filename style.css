@@ -2,20 +2,110 @@
     padding: 0;
     margin: 0;
 }
-body{
+body {
+    margin: 0;
+    font-family: sans-serif;
     background: linear-gradient(to right, #0a1128, #001f54, #034078);
+    color: white
+}
+
+/* --- HEADER --- */
+.header {
+    display: flex;
+    justify-content: space-between; /* Distribui logo, menu e socialMedias */
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #0a1128; /* Cor principal do seu gradiente */
     color: white;
-    height: 100vh;
-    font-size: 25px;
+}
+
+.logo img {
+    width: 250px;
+    height: auto; /* Garante que a altura seja ajustada proporcionalmente */
+    display: block; /* Remove o pequeno espaço abaixo da imagem */
+}
+
+/* Links de Navegação (Desktop) */
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Links em linha no desktop */
+    gap: 10px; /* Espaço entre os links */
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #a0d2eb; /* Um azul mais claro para o hover */
+}
+
+/* Redes Sociais */
+.socialMedias {
+    display: flex;
+    gap: 15px; /* Espaço entre os ícones de mídia social */
+}
+
+.socialMedias img {
+    width: 10px; /* Tamanho dos ícones */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.socialMedias img:hover {
+    transform: translateY(-3px); /* Efeito sutil ao passar o mouse */
+}
+
+/* Menu Hambúrguer - Estilos base */
+.menuHamburguer {
+    display: none; /* Esconde o botão em telas grandes */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    z-index: 100; /* Garante que o hambúrguer fique acima de outros elementos */
+}
+
+.menuHamburguer .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuHamburguer .bar:last-child {
+    margin-bottom: 0; /* Remove a margem da última barra */
+}
+
+/* Animação do Hambúrguer (X) */
+.menuHamburguer.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menuHamburguer.active .bar:nth-child(2) {
+    opacity: 0; /* Esconde a barra do meio */
+}
+
+.menuHamburguer.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 /* ----- HEADER ----- */
 .header{
-    padding: 30px;
-    display: grid;
-    margin: 0 auto;
-    grid-template-columns: 10% 80% 10%;
-    grid-template-areas: 
-    "logo menuArea socialMedias";
+    padding: 15px 20px ;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
 }
 
 .logo{
@@ -30,7 +120,6 @@ body{
     display: flex ;
     justify-content: center;
     gap: 25px;
-    grid-area: menuArea;
     transition: transform 0.3s ease-in;
 }
 .menu div a{
@@ -38,13 +127,12 @@ body{
     color: white;   
 } 
 .menu :hover{
-    transform: scale(1.1) translateY(-3px);
+    transform: scale(1) translateY(-3px);
 }
 .socialMedias{
     gap: 10px;
     display: flex;  
     justify-content: end;
-    grid-area: socialMedias;
     transition: transform 0.3s ease;
 }
 .socialMedias :hover{
@@ -91,3 +179,136 @@ body{
     /* border: 3px solid saddlebrown; */
 }
 /* ----- FOOTER ----- */
+.footer{
+    display: none;
+}
+
+/* PROJETOS AREA */
+.content{
+    text-align: center;
+}
+.menuProjetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.card {
+    width: 200px;
+    height: 200px;
+    border: 3px inset #0a1128;
+}
+.topoCard{
+    background-color: #0a1128;
+    padding: 10px;
+}
+.contentCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+}
+.contentCard img{
+    width: 100px;
+    transition: transform 0.3s ease;
+}
+.contentCard img:hover{
+    transform: translateY(-3px); 
+}
+.footerCard{
+    padding: 10px;
+    background-color:#0a1128 ;
+}
+.footerCard a {
+    color: white;
+    text-decoration: none;
+}
+
+/* RESPONSIVIDADE AREA */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+        justify-content: space-between; /* Mantém logo e hambúrguer nas extremidades */
+        align-items: center; /* Alinha verticalmente */
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        width: 180px; 
+    }
+
+    .socialMedias{
+        display: none; /* Esconde as mídias sociais em telas menores */
+    }
+
+    /* Mostra o botão hambúrguer */
+    .menuHamburguer {
+        display: block;
+    }
+
+    /* Links de Navegação (Mobile) */
+    .menu {
+        display: none; /* Esconde os links por padrão */
+        width: 100%; /* Ocupa toda a largura */
+        background-color: #0d1a3c; /* Fundo do menu quando aberto */
+        position: absolute; /* Posição absoluta para sobrepor o conteúdo */
+        top: 40px;
+        left: 0;
+        flex-direction: column; /* Links um abaixo do outro */
+        text-align: center;
+        transform: translateY(-100%); /* Escondido para cima */
+        transition: transform 0.3s ease-in-out; /* Animação ao mostrar/esconder */
+    }
+
+    .menu.active {
+        display: flex; /* Mostra o menu */
+        transform: translateY(0); /* Desliza para baixo */
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0; /* Remove padding padrão da ul */
+    }
+
+    .menu ul li {
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador */
+    }
+
+    .menu ul li:last-child {
+        border-bottom: none;
+    }
+
+    .menu ul li a {
+        padding: 15px 0; /* Espaço vertical nos links */
+        display: block; /* Faz com que o link preencha a largura do li */
+    }
+    .sobreMimArea{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer{
+        display: flex;
+        /* flex-direction: ; */
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer div img{
+        width: 30px; /* Tamanho dos ícones */
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+    .footer div img:hover{
+        transform: translateY(-3px)
+    }
+}
+
+
+/* Ajuste adicional para telas menores que 480px, por exemplo */
+@media (max-width: 480px) {
+    .logo img {
+        width: 150px;
+    }
+}
