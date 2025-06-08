@@ -180,7 +180,9 @@ body {
 }
 /* ----- FOOTER ----- */
 .footer{
+    padding: 10px;
     display: none;
+    background-color: #0a1128; 
 }
 
 /* PROJETOS AREA */
@@ -226,6 +228,10 @@ body {
 
 /* RESPONSIVIDADE AREA */
 @media (max-width: 768px) {
+    .frontIndex{
+        display: flex;
+        flex-direction: column;
+    }
     .header {
         flex-wrap: wrap; /* Permite que os itens quebrem a linha */
         justify-content: space-between; /* Mantém logo e hambúrguer nas extremidades */
@@ -291,6 +297,7 @@ body {
     .footer{
         display: flex;
         /* flex-direction: ; */
+        margin-top: auto;
         gap: 15px;
         justify-content: center;
         align-items: center;
