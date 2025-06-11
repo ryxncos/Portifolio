@@ -7,110 +7,118 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="frontIndex">
-        <div class="header">
-            <!-- CABEÇALHO DO SITE -->
-            <div class="logo">
-                <div>
-                    <img src="img/logo.png" alt="">
-                </div>
+    <div class="conteiner">
+        <div id="inicio"></div>
+        <header id="inicio">
+            <section class="logo">
+                <!-- <a href="#inicio"><img src="img/logo.png" alt=""></a> -->
+                 <a href=""><h1>Ryan Silva - Portfólio</h1></a>
+            </section>
+            <nav class="nav">
+                    <a href="#inicio">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#projeto">Projetos</a>
+                    <a href="#contato">Contato</a>
+            </nav>
+            <nav class="menuH"><img src="icons/hamburguer.png" alt=""></nav>
+        
+        </header>
+        <main>
+            <div class="apresentacao">
+                <h2>Ryan Clayton | Desenvolvedor Web. <br> Jovem talento em ADS, com foco em soluções digitais e aprendizado ágil. Pronto para contribuir.</h2>
             </div>
 
-            <div class="menu"> <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projeto.html">Projetos</a></li>
-            </ul>
+            <div id="sobre">
+
             </div>
 
-        <button class="menuHamburguer" aria-label="Abrir Menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span> </button>
-
-            <div class="socialMedias">
-                <div>
-                    <a href="https://github.com/ryxncos/" target="_blank">
-                        <img src="icon/github.png" alt="">
-                    
-                    
-                    </a>
+            <div class="content">
+                <div class="sobre">
+                    <h1>Sobre Mim</h1>
                 </div>
-                <div><a href="https://www.instagram.com/ryxncos/" target="_blank">
-                    <img src="icon/ig.png" alt="">
-                
-                </a>
+                <div class="partS">
+                    <div class="partEsq">
+                        <div class="card">
+                            <section class="imgCard"><img src="img/pfp.jpg" alt=""></section>
+                            <br>
+                            <section class="detalhes">
+                                <span>Ryan Silva</span><br><br>
+                                <span>Assistente de Suporte Computacional</span>
 
-                </div>
-                <div><a href="https://www.linkedin.com/in/ryan-silva-1a37562a8/" target="_blank">
-                    <img src="icon/linkedin.png" alt="" >
-                
-                </a>
-
-                </div>
-                <div><a href="" target="_blank">
-                    <img src="icon/wpp.png" alt="" >
-                
-                </a>
-
-                </div>
-            </div>
-        </div>
-        <!-- CONTEUDO DO SITE -->
-        <div class="content">
-            <!-- <div class="sobreMimtittle">Sobre Mim</div>
-             -->
-            <br><br>
-            <div>
-                <div class="sobreMimArea">
-                    <div class="pfpCard">
+                            </section>
+                        </div>
+                    </div>
+                    <div class="partDir">
+                        <span class="txtInt">
+                            Sou um apreciador da tecnologia e estudante de Análise e Desenvolvimento de Sistemas (ADS).
+                            <br><br>
+                            Atualmente, atuo como Assistente de Analista de Suporte, onde aprimoro minhas habilidades em resolução de problemas e atendimento ao cliente.
+                            <br><br>
+                             Minha verdadeira paixão, no entanto, reside no desenvolvimento web. Como Dev Web, estou constantemente explorando novas ferramentas e linguagens para criar experiências digitais intuitivas e eficazes. Meu objetivo é aplicar meu conhecimento técnico e minha paixão por inovação para desenvolver soluções que façam a diferença.
+                        </span>
+                    </div>
                         
-                        <div class="picP">
-                            <img src="img/pfp.jpg" alt="">
-                        </div>
-                        <br>
-                        <div class="detalhesCard">
-                            <div>Ryan Clayton Oliveira Silva</div>
-                            <div>Dev Web  | ADS <br> Assistente de Analista de Suporte</div>
-                            <div>19 anos</div>
-                        </div>
                     </div>
-                    <div class="sobreTxt">
-                        Sou Ryan Clayton Oliveira Silva, um entusiasta da tecnologia e estudante de Análise e Desenvolvimento de Sistemas (ADS). Atualmente, atuo como Assistente de Analista de Suporte, onde aprimoro minhas habilidades em resolução de problemas e atendimento ao cliente.
-
-                        Minha verdadeira paixão, no entanto, reside no desenvolvimento web. Como Dev Web, estou constantemente explorando novas ferramentas e linguagens para criar experiências digitais intuitivas e eficazes. Meu objetivo é aplicar meu conhecimento técnico e minha paixão por inovação para desenvolver soluções que façam a diferença.
-                    </div>
-
                 </div>
-                
+                <div class="habilidade" id="habilidades">
+                    <div class="sobre">
+                        <h1>Minhas Habilidades</h1>
+                    </div>
+                    <section class="dev">
+                        <div class="cardHab">
+                            <span>HTML</span>
+                            <img src="icons/html.png" alt="">
+                        </div>
+                        <div class="cardHab">CSS
+                            <img src="icons/css.png" alt="">
+                        </div>
+                        <div class="cardHab">JS
+                            <img src="icons/js.png" alt="">
+                        </div>
+                        <div class="cardHab">SQL
+                            <img src="icons/sql.png" alt="">
+                        </div>
+                    </section>
+                </div>
+                <div class="projeto" id="projeto">
+                    <div class="sobre">
+                        <h1>Meus Projetos</h1>
+                    </div>
+                    <section class="projetosArea">
+                        <div></div>
+                        <div></div>
+                    </section>
+                </div>
+                <div class="contato" id="contato">
+                    <div class="sobre">
+                        <h1>Meus Contatos</h1>
+                    </div>
+                    <div class="contatoArea">
+                        <div class="socMe">
+                            <a href="https://github.com/ryxncos/" target="_blank">
+
+                                <img src="icons/github.png" alt="">
+                            </a>
+                        </div>
+                        <div class="socMe">
+                            <a href="https://www.linkedin.com/in/ryan-silva-1a37562a8/" target="_blank">
+                                
+                                <img src="icons/linkedin.png" alt="">
+                            </a>
+                        </div>
+                        <div class="socMe">
+                            <a href="https://www.instagram.com/ryxncos/" target="_blank">
+
+                                <img src="icons/ig.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="footer">
-            <div>
-                    <a href="https://github.com/ryxncos/" target="_blank">
-                        <img src="icon/github.png" alt="">
-                    
-                    
-                    </a>
-                </div>
-                <div><a href="https://www.instagram.com/ryxncos/" target="_blank">
-                    <img src="icon/ig.png" alt="">
-                
-                </a>
-
-                </div>
-                <div><a href="https://www.linkedin.com/in/ryan-silva-1a37562a8/" target="_blank">
-                    <img src="icon/linkedin.png" alt="" >
-                
-                </a>
-
-                </div>
-                <div><a href="" target="_blank">
-                    <img src="icon/wpp.png" alt="" >
-                
-                </a>
-
-                </div>
-        </div>
+            
+        </main>
+        <footer></footer>
     </div>
     <script src="script.js"></script>
 </body>
