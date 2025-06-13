@@ -80,7 +80,7 @@ main {
 }
 .apresentacao{
     display: flex;
-
+    justify-content: center;
     align-items: center;
     text-align: center;
     border-radius: 30px;
@@ -215,7 +215,7 @@ footer {
 /* ------------------------------ */
 @media (max-width: 768px) {
     html {
-        font-size: 10px !important;
+        font-size: 15px !important;
     }
     body {
         
@@ -228,6 +228,9 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+    .txtInt{
+        font-size: 18px !important;
     }
 
     .nav {
@@ -258,5 +261,25 @@ footer {
     }
     .dev{
         flex-wrap: wrap;
+    }
+    .dev img {
+        width: 65px;
+    }
+    .socMe img {
+        width: 40px;
+    }
+    .apresentacao{
+        width: 90%;
+    }
+    .habilidade{
+        width: 90%;
+    }
+    .projeto{
+        width: 90%;
+    }
+
+    .content {
+        margin-top: 50px;
+        width: 90%;
     }
 }
