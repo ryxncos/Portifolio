@@ -235,8 +235,11 @@ footer {
 
     .nav {
         display: none; /* Esconde os links por padrão */
-        width: 100%; /* Ocupa toda a largura */
+        width: 100vw; /* Ocupa toda a largura */
         background-color: #0a1128;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        /* border-bottom-right-radius: 30px; */
         position: absolute;
         top: 50px;
         left: 0;
@@ -244,6 +247,7 @@ footer {
         text-align: center;
         transform: translateY(-100%); /* Escondido para cima */
         transition: transform 0.3s ease-in-out; 
+        box-shadow: 0px 12px 24px rgba(131, 131, 131, 0.2);
     }
     .nav.active {
         display: flex; /* Mostra o menu */
